@@ -15,8 +15,10 @@
 * The VAE model is defined and compiled in VAE.py. The model consists of an encoder and a decoder. The encoder transforms the input sequences into a lower-dimensional latent space. The decoder then reconstructs the input sequences from the latent space representation.
 * The encoder and decoder are connected in such a way that the model can be trained end-to-end to minimize the reconstruction error and a divergence measure between the distribution of the latent space and a standard normal distribution.
 
-## Training
+## Data Preparation
 * Please download SARS2 sequences from GISAID (https://gisaid.org/).
+
+## Training
 * The VAE model is trained on the encoded sequence data. The model learns to encode the input data into a lower-dimensional latent space and then decode the latent space representation back into the original data. The objective is to minimize the difference between the input data and the reconstructed data.
 * The training process is performed in the script VAE.py. This script loads the one-hot encoded sequence data, compiles the VAE model, and trains it on the sequence data.
 
